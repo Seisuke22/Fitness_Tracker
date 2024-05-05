@@ -21,6 +21,11 @@ class WorkoutController
     @workouts.add_workout(create_workout)
   end
 
+  def mark!
+    index = @view.get_index
+    @workouts.mark_complete(index)
+  end
+
   def delete!
     index_input = @view.get_index
     @workouts.destroy(index_input)

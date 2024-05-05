@@ -1,5 +1,5 @@
 class Workout
-  attr_accessor :id, :workout_name, :sets, :reps, :weight
+  attr_accessor :id, :workout_name, :sets, :reps, :weight, :complete
   attr_reader :time_start, :time_finished
   def initialize(attributes = {})
     @id = attributes[:id].to_i
@@ -9,5 +9,6 @@ class Workout
     @weight = attributes[:weight]
     @time_start = attributes[:time_start]
     @time_finished = attributes[:time_finished]
+    @complete = false
   end
 end

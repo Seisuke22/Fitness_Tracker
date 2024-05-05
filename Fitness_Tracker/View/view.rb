@@ -6,8 +6,9 @@ class View
 
   def display_workout(workouts)
     workouts.each_with_index do |workout, index|
+      x = workout.complete ? "X" : nil
       puts "*" * 35
-      puts "#{index + 1} - Workout Name: #{workout.workout_name} | Sets: #{workout.sets} | Reps: #{workout.reps} | Weight: #{workout.weight} KG"
+      puts "#{index + 1} - [ #{x} ] - Workout Name: #{workout.workout_name} | Sets: #{workout.sets} | Reps: #{workout.reps} | Weight: #{workout.weight} KG"
     end
   end
 

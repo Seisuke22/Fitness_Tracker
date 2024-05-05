@@ -20,15 +20,18 @@ class WorkoutRepository
    @workouts
   end
 
-  # def add_reps_sets(count)
-  #   @workouts << count
-  #   save_csv
-  # end
 
   def destroy(workout_index)
     @workouts.delete_at(workout_index)
     save_csv
   end
+
+  def mark_complete(index)
+    workout = @workouts[index]
+    workout.complete = true
+    save_csv
+  end
+
 
   # def change(workout_index, new_count)
   #   @workouts[workout_index] = "#{new_count}"
