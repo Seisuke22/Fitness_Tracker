@@ -7,7 +7,7 @@ class View
   def display_workout(workouts)
     workouts.each_with_index do |workout, index|
       puts "*" * 35
-      puts "#{index + 1} - Workout Name: #{workout.workout_name} | Sets: #{workout.sets} | Reps: #{workout.reps}"
+      puts "#{index + 1} - Workout Name: #{workout.workout_name} | Sets: #{workout.sets} | Reps: #{workout.reps} | Weight: #{workout.weight} KG"
     end
   end
 
@@ -23,6 +23,11 @@ class View
 
   def get_reps
     puts "How many reps?"
+    gets.chomp.to_i
+  end
+
+  def get_weight
+    puts "How much weight?"
     gets.chomp.to_i
   end
 end

@@ -16,7 +16,8 @@ class WorkoutController
     workout_name = @view.get_workout_name
     sets_count = @view.get_sets
     reps_count = @view.get_reps
-    create_workout = Workout.new(workout_name: workout_name, sets: sets_count, reps: reps_count)
+    weight_count = @view.get_weight
+    create_workout = Workout.new(workout_name: workout_name, sets: sets_count, reps: reps_count, weight: weight_count)
     @workouts.add_workout(create_workout)
   end
 
